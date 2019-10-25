@@ -9,6 +9,9 @@ function Food(options){
 
 var position='absolute';
 Food.prototype.render=function(map){
+    //随机生成x,y
+    this.x=Tools.getRandom(0,map.offsetWidth/this.width-1)*this.width;
+    this.y=Tools.getRandom(0,map.offsetHeight/this.height-1)*this.height;
     //动态创建食物div
     var div=document.createElement('div');
     map.appendChild(div);
